@@ -1,0 +1,140 @@
+  The default baudrate is 1500000 (1.5Mbps)
+###################################################################################
+
+console:/ # uname -a
+Linux localhost 5.10.157 #1 SMP PREEMPT Mon Aug 7 22:09:04 CST 2023 aarch64 Toybox
+console:/ # whoami
+root
+
+console:/ # df -h
+Filesystem            Size Used Avail Use% Mounted on
+tmpfs                 1.9G 1.2M  1.9G   1% /dev
+tmpfs                 1.9G    0  1.9G   0% /mnt
+/dev/block/mmcblk2p11  10M  80K   10M   1% /metadata
+/dev/block/dm-0       1.8G 1.8G  5.6M 100% /
+/dev/block/dm-3       142M 142M  464K 100% /vendor
+/dev/block/dm-5       700K 696K  4.0K 100% /odm
+/dev/block/dm-1       232K  36K  196K  16% /system_dlkm
+/dev/block/dm-2        58M  58M  180K 100% /system_ext
+/dev/block/dm-4        22M  22M   76K 100% /vendor_dlkm
+/dev/block/dm-6       232K  36K  196K  16% /odm_dlkm
+/dev/block/dm-7       199M 198M  612K 100% /product
+tmpfs                 1.9G 8.0K  1.9G   1% /apex
+tmpfs                 1.9G 492K  1.9G   1% /linkerconfig
+/dev/block/mmcblk2p10 1.3G 156K  1.3G   1% /cache
+/dev/block/mmcblk2p14  22G 2.5G   20G  12% /data
+tmpfs                 1.9G    0  1.9G   0% /data_mirror
+/dev/fuse              22G 2.5G   20G  12% /mnt/user/0/emulated
+
+
+console:/ # ls /sys/firmware/devicetree/base/
+#address-cells                 qos@ff200200
+#size-cells                    qos@ff200280
+__symbols__                    qos@ff200300
+acodec-sound                   qos@ff200380
+acodec@ffe10000                qos@ff210000
+adc-keys                       qos@ff210080
+aliases                        qos@ff220000
+arm-pmu                        qos@ff220080
+avsd_plus@ff7c1000             qos@ff240000
+chosen                         qos@ff250000
+clock-controller@ff4a0000      qos@ff260000
+clocks                         qos@ff270000
+compatible                     qos@ff270080
+cpu0-opp-table                 qos@ff270100
+cpuinfo                        qos@ff270200
+cpus                           qos@ff270280
+crypto@ffc40000                qos@ff270300
+dc-12v                         qos@ff270380
+debug@ff190000                 qos@ff270480
+display-subsystem              qos@ff270500
+dma-controller@ffd60000        qos@ff280000
+dmc                            qos@ff280080
+dmc-opp-table                  qos@ff280100
+dummy-battery                  qos@ff280180
+dummy-charger                  qos@ff280200
+dummy-codec                    qos@ff280280
+ethernet@ffbd0000              qos@ff280300
+ethernet@ffbe0000              qos@ff280380
+fd628-dev                      qos@ff280400
+fiq-debugger                   reserved-memory
+firmware                       rga@ff850000
+gpio-leds                      rkvdec@ff740100
+gpu-bus                        rkvenc@ff780000
+gpu-bus-opp-table              rkvtunnel
+gpu-opp-table                  rng@ffc50000
+gpu@ff700000                   rockchip-suspend
+hdcp2@ff8c0000                 rockchip-system-monitor
+hdmi-sound                     sai@ffb70000
+hdmi@ff8d0000                  sai@ffb80000
+hdmiphy@ffe00000               sai@ffb90000
+hwspinlock@ffd70000            sai@ffba0000
+i2c@ffa50000                   saradc@ffae0000
+i2c@ffa58000                   scmi-shmem@10f000
+i2c@ffa60000                   sdio-pwrseq
+i2c@ffa68000                   serial-number
+i2c@ffa70000                   serial@ff9f0000
+i2c@ffa78000                   serial@ff9f8000
+i2c@ffa80000                   serial@ffa00000
+i2c@ffa88000                   serial@ffa08000
+iep@ff860000                   serial@ffa10000
+interrupt-controller@fed01000  serial@ffa18000
+interrupt-parent               serial@ffa20000
+iommu@ff740800                 serial@ffa28000
+iommu@ff78f000                 spdif-out
+iommu@ff7c0800                 spdif-sound
+iommu@ff847e00                 spdif@ffbc0000
+iommu@ff850f00                 spi@ff9c0000
+iommu@ff860800                 spi@ff9d0000
+iommu@ff870480                 spi@ffc00000
+jpegd@ff870000                 sram@fe480000
+mailbox@ff630000               syscon@ff300000
+memory                         syscon@ff540000
+mmc@ffbf0000                   thermal-zones
+mmc@ffc10000                   timer
+mmc@ffc20000                   timer@ffab0000
+mmc@ffc30000                   tsadc@ffad0000
+model                          tve@ff880000
+mpp-srv                        usb2-phy@ffdf0000
+name                           usb@ff100000
+otp@ffce0000                   usb@ff140000
+pcie@fe4f0000                  usbdrd
+pdm-mic-array                  vcc-3v3-s3
+pdm@ffbb0000                   vcc-ddr-s3
+phy@ffdc0000                   vcc-sd
+pinctrl                        vcc5v0-host-regulator
+power-management@ff600000      vcc5v0-sys
+psci                           vccio-sd
+pwm@ffa90000                   vdd-0v9-s3
+pwm@ffa90010                   vdd-1v8-s3
+pwm@ffa90020                   vdd-cpu
+pwm@ffa90030                   vdd-logic
+pwm@ffa98000                   vdpp@ff861000
+pwm@ffa98010                   vdpu@ff7c0400
+pwm@ffa98020                   vop@ff840000
+pwm@ffa98030                   watchdog@ffac0000
+qos@ff200000                   wireless-bluetooth
+qos@ff200080                   wireless-wlan
+qos@ff200100
+
+console:/ # ls /dev/block/by-name/ -al
+total 0
+drwxr-xr-x 2 root root  380 1970-01-01 03:00 .
+drwxr-xr-x 6 root root 1280 1970-01-01 03:00 ..
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 backup -> /dev/block/mmcblk2p9
+lrwxrwxrwx 1 root root   21 1970-01-01 03:00 baseparameter -> /dev/block/mmcblk2p12
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 boot -> /dev/block/mmcblk2p7
+lrwxrwxrwx 1 root root   21 1970-01-01 03:00 cache -> /dev/block/mmcblk2p10
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 dtbo -> /dev/block/mmcblk2p5
+lrwxrwxrwx 1 root root   21 1970-01-01 03:00 metadata -> /dev/block/mmcblk2p11
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 misc -> /dev/block/mmcblk2p4
+lrwxrwxrwx 1 root root   18 1970-01-01 03:00 mmcblk2 -> /dev/block/mmcblk2
+lrwxrwxrwx 1 root root   23 1970-01-01 03:00 mmcblk2boot0 -> /dev/block/mmcblk2boot0
+lrwxrwxrwx 1 root root   23 1970-01-01 03:00 mmcblk2boot1 -> /dev/block/mmcblk2boot1
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 recovery -> /dev/block/mmcblk2p8
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 security -> /dev/block/mmcblk2p1
+lrwxrwxrwx 1 root root   21 1970-01-01 03:00 super -> /dev/block/mmcblk2p13
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 trust -> /dev/block/mmcblk2p3
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 uboot -> /dev/block/mmcblk2p2
+lrwxrwxrwx 1 root root   21 1970-01-01 03:00 userdata -> /dev/block/mmcblk2p14
+lrwxrwxrwx 1 root root   20 1970-01-01 03:00 vbmeta -> /dev/block/mmcblk2p6
