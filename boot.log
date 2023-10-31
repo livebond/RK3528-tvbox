@@ -1,0 +1,193 @@
+
+00: [00]DDR V1.05 4bit PCB 2eef4a672d huan.he 23/04/14-10:58:56
+LP4/4x derate disable, other dram:1x trefi
+ddrconfig:15
+DDR3, 324MHz
+BW=32 Col=11 Bk=8 CS0 Row=16 CS=1 Die BW=16 Size=4096MB
+tdqss: cs0 dqs0: 578ps, dqs1: 482ps, dqs2: 699ps, dqs3: 699ps, 
+
+change to: 324MHz
+clk skew:0x65
+
+change to: 528MHz
+clk skew:0x65
+
+change to: 666MHz
+clk skew:0x65
+
+change to: 786MHz(final freq)
+clk skew:0x65
+PHY drv:clk:50,ca:28,DQ:40,odt:145
+vrefinner:50%, vrefout:50%
+dram drv:34,odt:60
+cs 0:
+the read training result:
+DQS0:0x5b, DQS1:0x58, DQS2:0x55, DQS3:0x4f, 
+min  : 0x7  0xd  0xd  0xb  0xb  0x2  0x1  0x9 , 0xa  0xe  0x6  0x4  0x3  0x3  0x1  0x2 ,
+       0x7  0x9  0x6  0x8  0x8  0x3  0x3  0x2 , 0x0  0x4  0x6  0x2  0x9  0x6  0x6  0x7 ,
+mid  :0x2e 0x37 0x35 0x33 0x35 0x29 0x28 0x2f ,0x33 0x36 0x2e 0x2c 0x2b 0x2a 0x2a 0x29 ,
+      0x2a 0x30 0x2d 0x2e 0x2f 0x26 0x29 0x2b ,0x25 0x2c 0x30 0x27 0x32 0x2c 0x2e 0x2c ,
+max  :0x56 0x61 0x5e 0x5c 0x60 0x51 0x4f 0x55 ,0x5c 0x5e 0x56 0x55 0x53 0x52 0x53 0x50 ,
+      0x4e 0x58 0x55 0x54 0x57 0x4a 0x4f 0x54 ,0x4b 0x54 0x5a 0x4c 0x5b 0x52 0x57 0x52 ,
+range:0x4f 0x54 0x51 0x51 0x55 0x4f 0x4e 0x4c ,0x52 0x50 0x50 0x51 0x50 0x4f 0x52 0x4e ,
+      0x47 0x4f 0x4f 0x4c 0x4f 0x47 0x4c 0x52 ,0x4b 0x50 0x54 0x4a 0x52 0x4c 0x51 0x4b ,
+the write training result:
+DQS0:0x9f, DQS1:0x95, DQS2:0xab, DQS3:0xab, 
+min  :0x83 0x8b 0x89 0x88 0x8a 0x7d 0x7e 0x84 0x83 ,0x7c 0x7c 0x7a 0x79 0x74 0x74 0x72 0x74 0x7b ,
+      0x8d 0x94 0x93 0x8f 0x93 0x8c 0x8c 0x92 0x91 ,0x8e 0x94 0x96 0x8e 0x97 0x90 0x97 0x92 0x96 ,
+mid  :0x9c 0xa4 0xa2 0xa1 0xa3 0x96 0x94 0x9b 0x9e ,0x97 0x98 0x93 0x93 0x8f 0x8d 0x8c 0x8c 0x96 ,
+      0xa4 0xac 0xaa 0xa9 0xab 0xa2 0xa6 0xaa 0xac ,0xa5 0xae 0xb1 0xa9 0xb3 0xaa 0xae 0xac 0xb1 ,
+max  :0xb5 0xbd 0xbb 0xba 0xbc 0xaf 0xab 0xb2 0xb9 ,0xb2 0xb5 0xad 0xad 0xaa 0xa6 0xa6 0xa5 0xb1 ,
+      0xbb 0xc5 0xc1 0xc3 0xc4 0xb9 0xc0 0xc3 0xc8 ,0xbc 0xc8 0xcc 0xc4 0xd0 0xc4 0xc6 0xc6 0xcc ,
+range:0x32 0x32 0x32 0x32 0x32 0x32 0x2d 0x2e 0x36 ,0x36 0x39 0x33 0x34 0x36 0x32 0x34 0x31 0x36 ,
+      0x2e 0x31 0x2e 0x34 0x31 0x2d 0x34 0x31 0x37 ,0x2e 0x34 0x36 0x36 0x39 0x34 0x2f 0x34 0x36 ,
+out
+U-Boot SPL board init
+U-Boot SPL 2017.09-g0fbedd0675-230404 #zyf (Apr 11 2023 - 09:25:18)
+unknown raw ID 0 0 0
+unrecognized JEDEC id bytes: 00, 00, 00
+Trying to boot from MMC2
+Card did not respond to voltage select!
+mmc_init: -95, time 12
+spl: mmc init failed with error: -95
+Trying to boot from MMC1
+SPL: A/B-slot: _a, successful: 0, tries-remain: 7
+Trying fit image at 0x4000 sector
+## Verified-boot: 0
+## Checking atf-1 0x00040000 ... sha256(6dc9d8519d...) + OK
+## Checking uboot 0x00200000 ... sha256(657f956d0b...) + OK
+## Checking fdt 0x00313750 ... sha256(929a29dd65...) + OK
+## Checking atf-2 0xfe481000 ... sha256(d3b280df0c...) + OK
+## Checking atf-3 0xfe490000 ... sha256(e90f35dd37...) + OK
+## Checking optee 0x08400000 ... sha256(a8137e7e9e...) + OK
+Jumping to U-Boot(0x00200000) via ARM Trusted Firmware(0x00040000)
+Total: 118.266 ms
+
+INFO:    Preloader serial: 0
+NOTICE:  BL31: v2.3():v2.3-572-g642369d9b:finley.xiao
+NOTICE:  BL31: Built : 15:21:40, Apr 12 2023
+INFO:    rk_otp_init finish!
+INFO:    ARM GICv2 driver initialized
+INFO:    nonboot_cpus_off: clst_st=0xc0e, core_st=0xe1e0 boot_cpu=0
+INFO:    idle_st=0x0, pd_st=0x0
+INFO:    Using opteed sec cpu_context!
+INFO:    boot cpu mask: 1
+INFO:    rk_otp_init finish!
+INFO:    RK3528 SoC (0x101)
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: Initializing BL32
+I/TC: 
+I/TC: OP-TEE version: 3.13.0-689-gc73fd5531 #troy.lin (gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))) #1 Wed Apr 12 16:49:22 CST 2023 aarch64
+I/TC: Primary CPU initializing
+I/TC: Primary CPU switching to normal world boot
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x200000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2017.09 (Aug 08 2023 - 02:31:42 +0800)
+
+Model: Rockchip RK3528 Evaluation Board
+PreSerial: 0, raw, 0xff9f0000
+DRAM:  3.9 GiB
+Sysmem: init
+Relocation Offset: f9a4c000
+Relocation fdt: f79fa430 - f79fece0
+CR: M/C/I
+Using default environment
+
+DM: v2
+mmc@ffbf0000: 0, mmc@ffc30000: 1
+Bootdev(atags): mmc 0
+MMC0: HS400 Enhanced Strobe, 200Mhz
+PartType: EFI
+Android 13.0, Build 2023.3, v2
+boot mode: None
+RESC: 'boot', blk@0x0001bafc
+optee api revision: 2.0
+Device is: UNLOCKED
+DTB: rk-kernel.dtb
+HASH(c): OK
+ANDROID: fdt overlay OK
+vdd_logic init 900000 uV
+vdd_cpu init 953000 uV
+Warn: can't find phy driver
+Warn: can't find phy driver
+Model: Rockchip RK3528 DEMO1 LP4 V10 Board
+Rockchip UBOOT DRM driver version: v1.0.1
+VOP have 2 active VP
+vp0 have layer nr:3[0 2 3 ], primary plane: 2
+vp1 have layer nr:2[8 9 ], primary plane: 9
+disp info 0, type:11, id:0
+02: use default hdmi phy table
+hdmi@ff8d0000 disconnected
+disp info 2, type:13, id:0
+base2_disp_info couldn't be found, screen_info type[0] or id[0] mismatched
+cvbs info isn't saved in main block
+tve@ff880000:  detailed mode clock 13500 kHz, flags[1015]
+    H: 0720 0753 0816 0864
+    V: 0576 0580 0586 0625
+bus_format: 2025
+VOP update mode to: 720x576i50, type: BT656 for VP1
+VP1 set crtc_clock to 27000KHz
+VOP VP1 enable Esmart3[1280x720->720x576@0x0] fmt[1] addr[0xfa1a4000]
+03: CLK: (uboot. arm: enter 600000 KHz, init 1200000 KHz, kernel 0N/A)
+  apll 600000 KHz
+  gpll 1188000 KHz
+  cpll 996000 KHz
+  dpll 393000 KHz
+  ppll 1000000 KHz
+  clk_50m 49800 KHz
+  clk_100m 99600 KHz
+  clk_150m 148500 KHz
+  clk_200m 198000 KHz
+  clk_250m 249000 KHz
+  clk_300m 297000 KHz
+  clk_339m 339428 KHz
+  clk_400m 396000 KHz
+  clk_500m 498000 KHz
+  clk_600m 594000 KHz
+  clk_ppll_50m 50000 KHz
+  clk_ppll_100m 100000 KHz
+  clk_ppll_125m 125000 KHz
+Net:   eth0: ethernet@ffbd0000
+Hit key to stop autoboot('CTRL+C'):  0 
+ANDROID: reboot reason: "(none)"
+Vboot=0, AVB images, AVB verify
+read_is_device_unlocked() ops returned that device is UNLOCKED
+avb_slot_verify.c:763: ERROR: vbmeta: Error verifying vbmeta image: OK_NOT_SIGNED
+preloaded: distribute image from 'boot'
+ANDROID: Hash OK
+Could not find "system" partition
+Booting IMAGE kernel at 0x00280000 with fdt at 0x08300000...
+
+
+Fdt Ramdisk skip relocation
+## Booting Android Image at 0x0027f800 ...
+Kernel: 0x00280000 - 0x01fa8808 (29859 KiB)
+ramdisk:    0x0a200000 - 0x0a335b38 (1239 KiB)
+## Flattened Device Tree blob at 0x08300000
+   Booting using the fdt blob at 0x08300000
+   XIP Kernel Image from 0x00280000 to 0x00280000 ... OK
+   kernel loaded at 0x00280000, end = 0x01fa8808
+  'reserved-memory' ramoops@110000: addr=110000 size=e0000
+   Using Device Tree in place at 0000000008300000, end 000000000831b5e8
+WARNING: could not set reg FDT_ERR_BADOFFSET.
+Adding bank: 0x00200000 - 0x08400000 (size: 0x08200000)
+Adding bank: 0x08c00000 - 0xfc000000 (size: 0xf3400000)
+== DO RELOCATE == Kernel from 0x00280000 to 0x00200000
+Total: 3606.607 ms
+
+Starting kernel ...
+
+I/TC: Secondary CPU 1 initializing
+I/TC: Secondary CPU 1 switching to normal world boot
+I/TC: Secondary CPU 2 initializing
+I/TC: Secondary CPU 2 switching to normal world boot
+I/TC: Secondary CPU 3 initializing
+I/TC: Secondary CPU 3 switching to normal world boot
+[    4.397818][    T1] FD628: Fd628 Driver init.
+[    4.398187][    T1] FD628: fd628_driver_probe get in
+[    4.398396][    T1] FD628: register_fd628_driver: Successed to register_fd628_driver 
+06: console:/ # 
+11: [   11.416332][  T381] FD628: fd628_dev_open 
